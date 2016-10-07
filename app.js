@@ -6,7 +6,7 @@ for (var i = 0; i < all_Inputs.length; i++) {
 
 function checked() {
 	return $("#modify-texte").is(":checked")
-};
+}
 $("input").click(function () {
 	var i_ClickOnTheColour = $(this).data("color");
 	if (checked()) {
