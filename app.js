@@ -1,8 +1,14 @@
-var all_Inputs = $("input");
-for (var i = 0; i < all_Inputs.length; i++) {
-	var couleurs = $(all_Inputs[i]).data("color")
-	$(all_Inputs[i]).css("background-color", couleurs);
+var allInputs = $("input");
+
+function changeButtonBackground(inputs){
+	 var len = inputs.length;
+	for (var i = 0; i < len; i++) {
+		var couleurs = $(inputs[i]).data("color")
+		$(inputs[i]).css("background-color", couleurs);
+	}
 }
+
+
 
 function checked() {
 	return $("#modify-texte").is(":checked")
@@ -16,3 +22,5 @@ $("input").click(function () {
 		$("body").css('background-color', i_ClickOnTheColour)
 	};
 });
+
+changeButtonBackground(allInputs);
